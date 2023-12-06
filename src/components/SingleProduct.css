@@ -1,0 +1,36 @@
+.single-product-container{
+    height: 100vh;
+    
+}
+.product-images-carousel{
+    height: 100vh;
+    width: 50vw;
+    float: left;
+    
+    /* background-color: aliceblue; */
+}
+.product-details {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: rgb(137, 192, 241); */
+    gap: 30px;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 400px;
+    /* background-color: black; */
+    margin: 0 auto; /* Center the image-container within its parent */
+    
+  }
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    
+  }
+  
