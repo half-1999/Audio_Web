@@ -11,7 +11,7 @@ const Card = ({ color, title, imageSrc, content, category }) => (
         <h2 className={`text-${color} font-bold text-2xl flex items-center`}>
           <div className="title-category-container">
             <span className="title">{title}</span>
-            <span className="category">Ctg: {category}</span>
+            {/* <span className="category">Ctg: {category}</span> */}
           </div>
         </h2>
       </div>
@@ -30,103 +30,113 @@ const Card = ({ color, title, imageSrc, content, category }) => (
 const AllProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  window.addEventListener("scroll", function () {
+    var filterNav = document.querySelector(".filter-nav");
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition >= filterNav.offsetTop) {
+      filterNav.classList.add("sticky");
+    } else {
+      filterNav.classList.remove("sticky");
+    }
+  });
   const products = [
     // Arche Series
     {
       title: "AR1",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR1.png",
+      // imageSrc: "/src/Images/Arche Series/AR1.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR2",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR2.jpeg",
+      // imageSrc: "/src/Images/Arche Series/AR2.jpeg",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR2I",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR2I.png",
+      // imageSrc: "/src/Images/Arche Series/AR2I.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR2H",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR2H.png",
+      // imageSrc: "/src/Images/Arche Series/AR2H.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR3",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR3.jpg",
+      // imageSrc: "/src/Images/Arche Series/AR3.jpg",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR32",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR32.png",
+      // imageSrc: "/src/Images/Arche Series/AR32.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR31",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR31.png",
+      // imageSrc: "/src/Images/Arche Series/AR31.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR32H",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR32H.png",
+      // imageSrc: "/src/Images/Arche Series/AR32H.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR32I",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR32I.png",
+      // imageSrc: "/src/Images/Arche Series/AR32I.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR33-21",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR33-21.png",
+      // imageSrc: "/src/Images/Arche Series/AR33-21.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR331",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR331.png",
+      // imageSrc: "/src/Images/Arche Series/AR331.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR332",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR332.png",
+      // imageSrc: "/src/Images/Arche Series/AR332.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR332H",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR332H.png",
+      // imageSrc: "/src/Images/Arche Series/AR332H.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
     {
       title: "AR21",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/AR21.png",
+      // imageSrc: "/src/Images/Arche Series/AR21.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
@@ -140,7 +150,7 @@ const AllProducts = () => {
     {
       title: "Arce Wireless system",
       category: "Arche Series",
-      imageSrc: "/src/Images/Arche Series/Arce Wireless system.png",
+      // imageSrc: "/src/Images/Arche Series/Arce Wireless system.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
@@ -149,7 +159,7 @@ const AllProducts = () => {
     {
       title: "44 front",
       category: "Keyer",
-      imageSrc: "/src/Images/Keyer/44 front.png",
+      // imageSrc: "/src/Images/Keyer/44 front.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
@@ -270,7 +280,7 @@ const AllProducts = () => {
     {
       title: "1",
       category: "Novo Conference System",
-      imageSrc: "/src/Images/Novo Conference system/1.png",
+      // imageSrc: "/src/Images/Novo Conference system/1.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
@@ -594,7 +604,7 @@ const AllProducts = () => {
     {
       title: "VC1",
       category: "Vector",
-      imageSrc: "/src/Images/VECTOR/VC1.png",
+      // imageSrc: "/src/Images/VECTOR/VC1.png",
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, hic? Magnam eum error saepe doloribus corrupti repellat quisquam alias doloremque!",
     },
@@ -705,7 +715,7 @@ const AllProducts = () => {
       : products.filter((product) => product.category === selectedCategory);
   console.log(products);
   return (
-    <div className="body bg-gray-800 min-h-screen flex justify-center items-center">
+    <div className="body bg-gray-800 min-h-screen flex justify-center items-center filter-nav-wrapper">
       <nav className="filter-nav">
         <div
           id="facetedSearch"

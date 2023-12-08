@@ -5,7 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Bungee Spice', sans-serif; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    /* font-family: 'Nova Square', sans-serif; */
+    font-family: 'Work Sans', sans-serif;
+
 }
 
 .card {
@@ -52,7 +57,7 @@ h1:hover{
     width: 100%;
     height: 220px;
     background: #333;
-    background-color: #333; /* Set a background color for the container */
+    background-color: #000000; /* Set a background color for the container */
     border-radius: 12px;
     overflow: hidden;
     transition: 0.5s;
@@ -60,6 +65,9 @@ h1:hover{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+.card:hover{
+  cursor: pointer;
 }
 
 .title-category-container {
@@ -154,7 +162,7 @@ font-size: 15px;
 
 .card .content a {
     position: relative;
-    top: 15px;
+    top: 12px;
     display: inline-block;
     padding: 12px 25px;
     text-decoration: none;
@@ -172,7 +180,7 @@ a {
 }
 .card:hover a {
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     scale: 0.9;
@@ -185,6 +193,7 @@ a {
 
 
 @media (max-width: 480px) {
+
     .card {
         width: 100%; /* Full width for smaller screens */
         margin-right: 0;
@@ -204,7 +213,7 @@ a {
 }
 
 .body {
-    background: rgb(0, 170, 176);
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     display: flex;
 }
@@ -221,7 +230,11 @@ a {
     border-radius: 20px;
   }
   .products-container {
-    flex: 3; /* Adjust as needed based on the desired ratio */
+    flex: 3;
+  }
+  .product-container{
+    margin-top: 20px; /* Adjust as needed based on the desired ratio */
+    
   }
 
 .container {
@@ -232,7 +245,7 @@ a {
     flex-wrap: wrap;
     /* gap: 16px; */
     padding: 16px;
-    box-shadow: 0 4px 8px rgb(0, 170, 176); /* Add a subtle shadow to the container */
+    /* box-shadow: 0 4px 8px rgb(0, 170, 176); Add a subtle shadow to the container */
 
 }
 
@@ -251,13 +264,19 @@ a {
     top: 0;
     height: 100vh;
     overflow-y: auto;
-    background-color: #2d3748;
+    background-color: #fff;
+
   }
   
   .facetedSearch__heading {
-    color: #cbd5e0;
+    /* color: #cbd5e0; */
     font-size: 1.5rem;
     margin-bottom: 8px;
+    box-shadow: 0 4px 8px rgb(0, 170, 176);
+    border-radius: 20%;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
   }
   
   .filter-buttons button {
@@ -265,29 +284,43 @@ a {
     width: 100%;
     padding: 8px;
     margin-bottom: 8px;
-    color: #cbd5e0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
     background-color: #4a5568;
     border: none;
-    border-radius: 4px;
+    border-radius: 20%;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgb(0, 170, 176);
   }
   
+   .filter-buttons{
+    margin-top: 20px;
+    margin-left: 10px;
+
+  }
   .filter-buttons button:hover,
   .filter-buttons button.active {
-    background-color: #2d3748;
+    background-color: rgb(0,170,176);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
   }
   
   .container {
     flex: 1;
     overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgb(0, 170, 176);
+
   }
   
   .card {
-    background-color: #4a5568;
+    /* background-color: #4a5568;
     color: #cbd5e0;
-    border-radius: 8px;
+    border-radius: 8px; */
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
   }
   
   .card:hover {
